@@ -32,10 +32,11 @@ tab6.code(example)
 
 with st.sidebar:
 	st.markdown("This is a side Bar")
-	    with container:
-        st.write("Valmet Tool")
-        st.markdown("[PDM](https://pdm.valmet.com/valmet/frameset.jsp)|[PWA](https://msproject.valmet.com/pwa/default.aspx)")
-        st.markdown("[Sovelia-New](https://prod.sovelia.valmet.com/auric/?page=view-search&pageParam=RAU3B67678%2C)|[Sovelia-Old](https://prod.sovelia.valmet.com/auric/servlet/search?extra_content=search&selected_workspace=Tab_PRO)")
+	container = st.container(border=True)
+	with container:
+		st.write("Valmet Tool")
+		st.markdown("[PDM](https://pdm.valmet.com/valmet/frameset.jsp)|[PWA](https://msproject.valmet.com/pwa/default.aspx)")
+		st.markdown("[Sovelia-New](https://prod.sovelia.valmet.com/auric/?page=view-search&pageParam=RAU3B67678%2C)|[Sovelia-Old](https://prod.sovelia.valmet.com/auric/servlet/search?extra_content=search&selected_workspace=Tab_PRO)")
 
 	container = st.container(border=True)
 	with container:
