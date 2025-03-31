@@ -4,8 +4,10 @@ import pandas as pd
 import streamlit as st
 
 st.title("My test steamlit python App")
+
 chart_data = pd.DataFrame(np.random.randn(15,3),columns=["A","B","C"])
-tab1, tab2,tab3,tab4,tab5,tab6,tab7,tab8 = st.tabs(["line_chart", "Area Chart","bar_chart","scatter_chart","data_frame","code"])
+
+tab1,tab2,tab3,tab4,tab5,tab6 = st.tabs(["line_chart", "Area Chart","bar_chart","scatter_chart","data_frame","code"])
 tab1.line_chart(chart_data["A"],x_label="This is x-axis",y_label="This is Y axis",use_container_width=True,color=(0,255,0))
 tab1.line_chart(chart_data,x="A",y="B",x_label="This is x-axis",y_label="This is Y axis",use_container_width=True,color=(0,255,255))
 tab1.line_chart(chart_data,x_label="This is x-axis",y_label="This is Y axis",use_container_width=True,color=[(255,255,0),(0,255,0),(0,0,255)])
