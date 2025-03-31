@@ -5,12 +5,16 @@ import streamlit as st
 
 st.title("My test steamlit python App")
 
-chart_data = pd.DataFrame(np.random.randn(15,3),columns=["A","B","C"])
+chart_data = pd.DataFrame(np.random.randn(15, 3), columns=["A", "B", "C"])
 
-tab1,tab2,tab3,tab4,tab5,tab6 = st.tabs(["line_chart", "Area Chart","bar_chart","scatter_chart","data_frame","code"])
-tab1.line_chart(chart_data["A"],x_label="This is x-axis",y_label="This is Y axis",use_container_width=True,color=(0,255,0))
-tab1.line_chart(chart_data,x="A",y="B",x_label="This is x-axis",y_label="This is Y axis",use_container_width=True,color=(0,255,255))
-tab1.line_chart(chart_data,x_label="This is x-axis",y_label="This is Y axis",use_container_width=True,color=[(255,255,0),(0,255,0),(0,0,255)])
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(
+	["line_chart", "Area Chart", "bar_chart", "scatter_chart", "data_frame", "code"])
+tab1.line_chart(chart_data["A"], x_label="This is x-axis", y_label="This is Y axis", use_container_width=True,
+                color=(0, 255, 0))
+tab1.line_chart(chart_data, x="A", y="B", x_label="This is x-axis", y_label="This is Y axis", use_container_width=True,
+                color=(0, 255, 255))
+tab1.line_chart(chart_data, x_label="This is x-axis", y_label="This is Y axis", use_container_width=True,
+                color=[(255, 255, 0), (0, 255, 0), (0, 0, 255)])
 tab2.subheader("Area Chart")
 tab2.area_chart(chart_data)
 
@@ -27,23 +31,18 @@ example = """def hello():
 	print("ok")"""
 tab6.code(example)
 
-
-    
-
 with st.sidebar:
 	st.markdown("This is a side Bar")
 	container = st.container(border=True)
 	with container:
 		st.write("Valmet Tool")
-		st.markdown("[PDM](https://pdm.valmet.com/valmet/frameset.jsp)|[PWA](https://msproject.valmet.com/pwa/default.aspx)")
-		st.markdown("[Sovelia-New](https://prod.sovelia.valmet.com/auric/?page=view-search&pageParam=RAU3B67678%2C)|[Sovelia-Old](https://prod.sovelia.valmet.com/auric/servlet/search?extra_content=search&selected_workspace=Tab_PRO)")
+		st.markdown(
+			"[PDM](https://pdm.valmet.com/valmet/frameset.jsp)|[PWA](https://msproject.valmet.com/pwa/default.aspx)")
+		st.markdown(
+			"[Sovelia-New](https://prod.sovelia.valmet.com/auric/?page=view-search&pageParam=RAU3B67678%2C)|[Sovelia-Old](https://prod.sovelia.valmet.com/auric/servlet/search?extra_content=search&selected_workspace=Tab_PRO)")
 
 	container = st.container(border=True)
 	with container:
 		st.write("AI Tool")
-	        st.markdown("China-[Deepseek](https://chat.deepseek.com/)|[Qwen](https://chat.qwen.ai/)")
-	        st.markdown("Global-[Chat GPT](https://chatgpt.com/)|[Grok](https://grok.com/?referrer=website)")
-	
-	
-	
-    
+		st.markdown("China-[Deepseek](https://chat.deepseek.com/)|[Qwen](https://chat.qwen.ai/)")
+		st.markdown("Global-[Chat GPT](https://chatgpt.com/)|[Grok](https://grok.com/?referrer=website)")
