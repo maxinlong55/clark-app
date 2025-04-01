@@ -4,7 +4,7 @@ import streamlit as st
 import requests  # pip install requests
 
 
-WEBHOOK_URL = st.secrets["WEBHOOK_URL"]
+WEBHOOK_URL = "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY5MDYzZTA0MzA1MjZjNTUzMDUxMzEi_pc"
 
 
 def is_valid_email(email):
