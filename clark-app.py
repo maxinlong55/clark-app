@@ -17,10 +17,12 @@ test002=st.Page(page="views/test002.py",
                 title="test002",
                 icon=":material/account_circle:")
 
-pg = st.navigation({
-	"Info":[about_me],
-	"Project":[test001,test002],
-})
+pg=st.navigation(
+    {
+        "Info":[about_me],
+        "Project":[test001,test002],
+    }
+)
 pg.run()
 
 
