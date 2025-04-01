@@ -5,7 +5,7 @@ import streamlit as st
 
 about_me=st.Page(page="views/about_me.py",
                 title="about_me",
-                icon=":material/:home:",
+                icon=":material/home:",
                 default=True)
 
 test001=st.Page(page="views/test001.py",
