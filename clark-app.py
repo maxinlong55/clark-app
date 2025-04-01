@@ -3,14 +3,19 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
+about_me=st.Page(page="views/about_me.py",
+                title="About Me",
+                icon=":material/:home",
+                default=True)
+
 test001=st.Page(page="views/test001.py",
                 title="test001",
                 icon=":material/account_circle:",
-                default=True)
+                )
 
 test002=st.Page(page="views/test002.py",
                 title="test002",
-                icon=":material/home:")
+                icon=":material/account_circle:")
 
 pg = st.navigation(pages=[test001,test002])
 pg.run()
