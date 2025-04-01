@@ -3,6 +3,17 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
+test001=st.Page(page="views/test001.py",
+                title="test001",
+                icon=":material/account_circle:",
+                default=True)
+
+test002=st.Page(page="views/test002.py",
+                title="test002",
+                icon=":material/home:")
+pg = st.navigation(pages=[test001,test002])
+pg.run()
+
 st.title("My test steamlit python App")
 
 chart_data = pd.DataFrame(np.random.randn(15, 3), columns=["A", "B", "C"])
