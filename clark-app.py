@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 
 about_me=st.Page(page="views/about_me.py",
-                title="about_me",
+                title="About Me",
                 icon=":material/home:",
                 default=True)
 
