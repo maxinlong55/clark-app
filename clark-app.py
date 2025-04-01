@@ -11,6 +11,7 @@ test001=st.Page(page="views/test001.py",
 test002=st.Page(page="views/test002.py",
                 title="test002",
                 icon=":material/home:")
+
 pg = st.navigation(pages=[test001,test002])
 pg.run()
 
