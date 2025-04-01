@@ -16,8 +16,8 @@ st.write("\n")
 st.subheader("Experience & Qualifications", anchor=False)
 st.write(
 	"""
-	- 2 Years maintain experience of hydraulic system
-	- 7 Years tail-made pressure test equipment design
+	- 2 Years hydraulic system maintain experience in Iron and Steel plant
+	- 7 Years tail-made pressure test equipment design 
 	- 8 Years Paper machine hydraulic design """
 )
 
