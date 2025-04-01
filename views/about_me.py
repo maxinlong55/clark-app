@@ -1,7 +1,7 @@
 import streamlit as st
 from forms.contact import contact_form
 
-@st.dialog("✉ Contact Me")
+@st.dialog("Contact Me")
 def show_contact_form():
 	contact_form()
 
@@ -16,8 +16,8 @@ with col2:
 		- A little knowledge about Python
 		"""
 	)
-	if st.button("Contact Me"):
-		contact_form()
+	if st.button("✉Contact Me"):
+		show_contact_form()
 
 st.write("\n")
 st.subheader("Experience & Qualifications", anchor=False)
