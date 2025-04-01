@@ -27,7 +27,6 @@ pg.run()
 
 
 with st.sidebar:
-	st.markdown("This is a side Bar")
 	container = st.container(border=True)
 	with container:
 		st.write("AI Tool")
