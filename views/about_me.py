@@ -5,5 +5,9 @@ with col1:
 	st.image("./assets/profile_image.png",width=230)
 with col2:
 	st.title("Clark Ma",anchor=False)
-	st.write("""Hydraulic engineer.
-	A little knowledge about Python""")
+	st.write(
+		"""
+		- Hydraulic engineer.
+		- A little knowledge about Python
+		"""
+	)
