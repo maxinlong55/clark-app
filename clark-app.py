@@ -3,13 +3,6 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-with st.sidebar:
-	container = st.container(border=True)
-	with container:
-		st.write("AI Tool")
-		st.markdown("China-[Deepseek](https://chat.deepseek.com/)|[Qwen](https://chat.qwen.ai/)")
-		st.markdown("Global-[Chat GPT](https://chatgpt.com/)|[Grok](https://grok.com/?referrer=website)")
-		
 about_me=st.Page(page="views/about_me.py",
                 title="About Me",
                 icon=":material/home:",
@@ -31,4 +24,11 @@ pg=st.navigation(
     }
 )
 pg.run()
+
+with st.sidebar:
+	container = st.container(border=True)
+	with container:
+		st.write("AI Tool")
+		st.markdown("China-[Deepseek](https://chat.deepseek.com/)|[Qwen](https://chat.qwen.ai/)")
+		st.markdown("Global-[Chat GPT](https://chatgpt.com/)|[Grok](https://grok.com/?referrer=website)")
 
