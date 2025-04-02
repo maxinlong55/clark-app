@@ -2,7 +2,7 @@ import streamlit as st
 
 col1,col2,col3 = st.columns(3,gap="small",vertical_alignment="center")
 with col2:
-	st.subheader("News and Comments",anchor=False)
+	st.subheader("News,Comments",anchor=False)
 
 st.markdown("""News and Comments""",unsafe_allow_html=True)
 st.markdown("mark_donw")
