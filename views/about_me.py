@@ -34,5 +34,5 @@ st.write(
 	"""
 	- Tools: Auto Cads, Invent, AmeSim
 	- Design scope: hydraulic,Pneumatic,Lubrication
-	- Scope:Fluid design \ Workshop test \ Commissioning """
+	- Scope:Fluid design | Workshop test | Commissioning """
 )
