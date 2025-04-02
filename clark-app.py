@@ -17,7 +17,7 @@ test002=st.Page(page="views/test002.py",
                 title="test002",
                 icon=":material/account_circle:")
 News_2025=st.Page(page="views/News_2025.py",
-                title="News and comments ",
+                title="News 2025 ",
                 icon=":material/newspaper:")
 
 pg=st.navigation(
