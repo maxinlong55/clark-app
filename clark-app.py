@@ -16,11 +16,15 @@ test001=st.Page(page="views/test001.py",
 test002=st.Page(page="views/test002.py",
                 title="test002",
                 icon=":material/account_circle:")
+News_2025=st.Page(page="views/News_2025.py",
+                title="News and comments ",
+                icon=":material/newspaper:")
 
 pg=st.navigation(
     {
         "Info":[about_me],
         "Project":[test001,test002],
+	"News":[News_2025]
     }
 )
 pg.run()
