@@ -5,7 +5,7 @@ with col2:
 	st.title("News and Comments",anchor=False)
 
 st.markdown("""News and Comments""",unsafe_allow_html=True)
-st.markdonw("mark_donw")
+st.markdown("mark_donw")
 st.title("title")
 st.header("header")
 st.subheader("subheader")
