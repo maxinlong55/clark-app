@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-st.title("My test steamlit python App")
+st.title("All kinds of Chart")
 
 chart_data = pd.DataFrame(np.random.randn(15, 3), columns=["A", "B", "C"])
 
