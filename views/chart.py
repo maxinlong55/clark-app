@@ -21,7 +21,7 @@ st.markdown("Matplotlib")
 
 
 fig,ax = plt.subplots(3,2,figsize=(10,15))
-# plt.xkcd()
+plt.xkcd()
 # plt.style.use("fivethirtyeight")
 ax[0,0].scatter(range(len(df["Glucose"])),df["Glucose"],color='red')
 ax[0,0].set_title("mapltolib title")
