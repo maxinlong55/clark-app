@@ -9,7 +9,7 @@ about_me=st.Page(page="views/about_me.py",
                 default=True)
 
 chart=st.Page(page="views/chart.py",
-                title="test001",
+                title="charts",
                 icon=":material/account_circle:",
                 )
 
