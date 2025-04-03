@@ -57,7 +57,7 @@ st.pyplot(fig)
 
 st.divider()
 
-st.title("living data")
+st.write("living data")
 if 'xx' not in st.session_state:
     st.session_state.xx = []
     st.session_state.yy = []
