@@ -23,7 +23,7 @@ News_2025=st.Page(page="views/News_2025.py",
 pg=st.navigation(
     {
         "Info":[about_me],
-        "Project":[test001,test002],
+        "Project":[chart,test002],
 	"News":[News_2025]
     }
 )
