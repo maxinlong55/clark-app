@@ -8,7 +8,7 @@ about_me=st.Page(page="views/about_me.py",
                 icon=":material/home:",
                 default=True)
 
-test001=st.Page(page="views/test001.py",
+chart=st.Page(page="views/chart.py",
                 title="test001",
                 icon=":material/account_circle:",
                 )
