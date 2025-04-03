@@ -20,7 +20,7 @@ st.divider()
 st.markdown("Matplotlib")
 
 
-fig,ax = plt.subplots(3,2,figsize=(10,15))
+fig,ax = plt.subplots(3,2,figsize=(12,16))
 plt.xkcd()
 # plt.style.use("fivethirtyeight")
 ax[0,0].scatter(range(len(df["Glucose"])),df["Glucose"],color='red')
