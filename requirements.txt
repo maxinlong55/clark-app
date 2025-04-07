@@ -2,7 +2,7 @@ altair
 pandas
 streamlit
 opencv-python-headless==4.9.0.80
-numpy==1.26.0
+numpy==1.26.4
 matplotlib
 mediapipe==0.10.21
 opencv-python==4.11.0.86
