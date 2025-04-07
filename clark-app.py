@@ -15,7 +15,7 @@ chart=st.Page(page="views/chart.py",
 
 camera=st.Page(page="views/camera.py",
                 title="Camera",
-                icon=":material/bar_chart:")
+                icon=":material/videocam:")
 News_2025=st.Page(page="views/News_2025.py",
                 title="News 2025 ",
                 icon=":material/newspaper:")
