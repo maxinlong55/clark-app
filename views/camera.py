@@ -23,31 +23,33 @@ if st.button("ballons"):
 
 st.divider()
 
-st.title("real-time hand detection with opencv")
+import streamlit as st
+import cv2
+import numpy as np
+import mediapipe as mp
 
-mp_hand = mp.solutions.hands
-hands = mp_hand.Hands(static_image_mode=False,max_num_hands=2)
+st.title("Hand Detection with MediaPipe")
 
+# 初始化 MediaPipe
+mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
-enable = st.checkbox("Start")
 
-cap = cv2.VideoCapture(0)
-frame_placeholder =st.empty()
-
-
-while cap.isOpened() and enable:
-    ret,frame = cap.read()
-    if not ret:
-        st.erro("Failed to capture frame.")
-        break
-    rgb_frame = cv2.cv2tColor(frame,cv2.COLOR_BGR2RGB)
-    results = hands.process(rgb_frame)
-    if results.multi_hand_landmarks:
-        for hand_landmarks in results.multi_hand_landmarks:
-            mp_drawing.draw_landmarks(frame,hand_landmarks,mp_hand.HAND_CONNECTIONS)
-    frame_placeholder.image(frame,channels="BGR")
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-cap.release()
-hands.close()
-st.divider()
+# 通过浏览器拍照
+picture = st.camera_input("Take a picture for hand detection")
+if picture:
+    # 将图片转为 OpenCV 格式
+    bytes_data = picture.getvalue()
+    frame = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
+    
+    # 手势识别
+    with mp_hands.Hands(static_image_mode=True, max_num_hands=2) as hands:
+        rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        results = hands.process(rgb_frame)
+        
+        if results.multi_hand_landmarks:
+            for landmarks in results.multi_hand_landmarks:
+                mp_drawing.draw_landmarks(
+                    frame, landmarks, mp_hands.HAND_CONNECTIONS)
+    
+    # 显示结果
+    st.image(frame, channels="BGR", caption="Processed Image")
