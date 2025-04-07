@@ -1,6 +1,7 @@
 import streamlit as st
 import cv2
 import numpy as np
+import mediapipe as mp
 
 st.title("Camera with OpenCV Processing")
 enable = st.checkbox("Enable Camera")
@@ -19,3 +20,33 @@ if picture:
 
 if st.button("ballons"):
   st.balloons()
+
+st.divider()
+
+st.title("real-time hand detection with mediapipe")
+
+mp_hand = mp.solutions.hands
+hands = mp_hand.Hands(static_image_mode=False,max_num_hands=2)
+
+mp_drawing = mp.solutions.drawing_utils
+enable = st.checkbox("Start")
+
+cap = cv.VideoCapture(0)
+frame_placeholder =st.empty()
+
+
+while cap.isOpened() and enable:
+    ret,frame = cap.read()
+    if not ret:
+        st.erro("Failed to capture frame.")
+        break
+    rgb_frame = cv.cvtColor(frame,cv.COLOR_BGR2RGB)
+    results = hands.process(rgb_frame)
+    if results.multi_hand_landmarks:
+        for hand_landmarks in results.multi_hand_landmarks:
+            mp_drawing.draw_landmarks(frame,hand_landmarks,mp_hand.HAND_CONNECTIONS)
+    frame_placeholder.image(frame,channels="BGR")
+    if cv.waitKey(1) & 0xFF == ord('q'):
+        break
+cap.release()
+hands.close()
