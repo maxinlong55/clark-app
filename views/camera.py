@@ -1,10 +1,6 @@
 import streamlit as st
 import cv2
 import numpy as np
-st.title("third")
-if st.button("ballons"):
-  st.balloons()
-
 
 st.title("Camera with OpenCV Processing")
 enable = st.checkbox("Enable Camera")
@@ -20,3 +16,6 @@ if picture:
         st.image(cv_image, channels="BGR", caption="Original Image")
     with col2:
         st.image(hsv_image, channels="HSV", caption="Processed Image (HSV)")
+
+if st.button("ballons"):
+  st.balloons()
