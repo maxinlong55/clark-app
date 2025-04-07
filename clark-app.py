@@ -13,7 +13,7 @@ chart=st.Page(page="views/chart.py",
                 icon=":material/bar_chart:",
                 )
 
-camera=st.Page(page="views/camera.py",
+camera_01=st.Page(page="views/camera.py",
                 title="Camera",
                 icon=":material/videocam:")
 News_2025=st.Page(page="views/News_2025.py",
@@ -23,7 +23,7 @@ News_2025=st.Page(page="views/News_2025.py",
 pg=st.navigation(
     {
         "Info":[about_me],
-        "Project":[chart,camera],
+        "Project":[chart,camera_01],
 	"News":[News_2025]
     }
 )
