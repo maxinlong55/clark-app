@@ -2,6 +2,7 @@ import streamlit as st
 import cv2
 import numpy as np
 import mediapipe as mp
+import cv2 as cv
 
 st.title("Camera with OpenCV Processing")
 enable = st.checkbox("Enable Camera")
