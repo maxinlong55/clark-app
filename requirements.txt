@@ -9,3 +9,4 @@ langchain_community
 langchain_text_splitters
 langchain_core
 langchain_ollama
+pdfplumber>=0.10.0
