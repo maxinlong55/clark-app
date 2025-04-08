@@ -19,12 +19,16 @@ camera=st.Page(page="views/camera.py",
 News_2025=st.Page(page="views/News_2025.py",
                 title="News 2025 ",
                 icon=":material/newspaper:")
+AI=st.Page(page="views/RAG_PDF.py",
+                title="RAG_PDF ",
+                icon=":material/newspaper:")
 
 pg=st.navigation(
     {
         "Info":[about_me],
         "Project":[chart,camera],
-	"News":[News_2025]
+	"News":[News_2025],
+	"AI":[AI]
     }
 )
 pg.run()
