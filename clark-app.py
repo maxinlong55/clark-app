@@ -27,10 +27,11 @@ pg=st.navigation(
     {
         "Info":[about_me],
         "Project":[chart,camera],
-	"News":[News_2025],
-	"AI":[AI]
+        "News":[News_2025],
+        "AI":[AI],
     }
 )
+
 pg.run()
 
 with st.sidebar:
