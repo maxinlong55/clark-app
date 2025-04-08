@@ -32,5 +32,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.markdown("""
-hello
+It's good, I could hear a Vise President who speak truth.
+I don't like this guy, but at least he don't speak too much useless stuff.
+I know what the so called globalization mean before this.
+But while you hear it speak out bluntness. it still hurt. 
+All those years freedom,equality are just bullshit. 
+Those freedom, equality are for them.
+
+To him, the builder seems are virtue. I don't know if he mean it.
+Maybe, he would say, a bundle of idiot without brain who became a builder. 
+Maybe, he just need a builder at this stage.
 """)
