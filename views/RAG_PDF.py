@@ -73,9 +73,9 @@ Context: {document_context}
 Answer:
 """
 PDF_STORAGE_PATH = 'document_store/pdfs/'
-EMBEDDING_MODEL = OllamaEmbeddings(model="llama3.2:1b")
+EMBEDDING_MODEL = OllamaEmbeddings(model="llama3.2:1b",base_url="http://localhost:11434")
 DOCUMENT_VECTOR_DB = InMemoryVectorStore(EMBEDDING_MODEL)
-LANGUAGE_MODEL = OllamaLLM(model="llama3.2:1b")
+LANGUAGE_MODEL = OllamaLLM(model="llama3.2:1b",base_url="http://localhost:11434")
 
 
 def save_uploaded_file(uploaded_file):
