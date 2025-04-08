@@ -21,7 +21,7 @@ News_2025=st.Page(page="views/News_2025.py",
                 icon=":material/newspaper:")
 AI=st.Page(page="views/RAG_PDF.py",
                 title="RAG_PDF ",
-                icon=":material/newspaper:")
+                icon=":material/robot:")
 
 pg=st.navigation(
     {
