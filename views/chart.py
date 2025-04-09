@@ -91,3 +91,11 @@ if st.button("Start Animation "):
         time.sleep(0.2)
 
     st.success("Animation Finished！")
+
+st.divider()
+
+column_name_list = df.columns
+selection = st.multiselect("selection",column_name_list)
+place_holder = st.empty()
+if len(selection) != 0:
+    place_holder.line_chart(df[selection])
