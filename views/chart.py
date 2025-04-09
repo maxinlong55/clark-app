@@ -77,7 +77,7 @@ if st.button("Start Animation "):
         # 绘制图表
         plt.style.use("fivethirtyeight")
         plt.figure(figsize=(10, 5))
-        plt.plot(st.session_state.xx, st.session_state.yy, label="随机数")
+        plt.plot(st.session_state.xx, st.session_state.yy, label="random")
         plt.plot(st.session_state.xx, st.session_state.zz, label="x²")
         plt.xlim(0, x + 10)
         plt.legend()
@@ -96,7 +96,7 @@ st.divider()
 st.markdown("Follow chart can be selected")
 column_name_list = df.columns
 selection = st.multiselect("selection from below",column_name_list)
-st.markdown("Follow item was seleted: ",selection)
+st.markdown("Follow item was seleted: ",str(selection))
 place_holder1 = st.empty()
 place_holder2 = st.empty()
 if len(selection) != 0:
