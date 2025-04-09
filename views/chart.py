@@ -101,4 +101,4 @@ place_holder1 = st.empty()
 place_holder2 = st.empty()
 if len(selection) != 0:
     place_holder1.line_chart(df[selection])
-    place_holder2.line_chart(df[selection])
+    place_holder2.bar_chart(df[selection])
