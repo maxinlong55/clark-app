@@ -93,9 +93,12 @@ if st.button("Start Animation "):
     st.success("Animation Finished！")
 
 st.divider()
-
+st.markdown("Follow chart can be selected")
 column_name_list = df.columns
-selection = st.multiselect("selection",column_name_list)
-place_holder = st.empty()
+selection = st.multiselect("selection from below",column_name_list)
+st.markdown("Follow item was seleted: ",selection)
+place_holder1 = st.empty()
+place_holder2 = st.empty()
 if len(selection) != 0:
-    place_holder.line_chart(df[selection])
+    place_holder1.line_chart(df[selection])
+    place_holder2.line_chart(df[selection])
