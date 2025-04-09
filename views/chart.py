@@ -96,7 +96,6 @@ st.divider()
 st.markdown("Follow chart can be selected")
 column_name_list = df.columns
 selection = st.multiselect("selection from below",column_name_list)
-st.markdown("Follow item was seleted: ",str(selection))
 place_holder1 = st.empty()
 place_holder2 = st.empty()
 if len(selection) != 0:
