@@ -68,7 +68,7 @@ chart_placeholder = st.empty()
 
 # 控制动画的按钮
 if st.button("Start Animation "):
-    for x in range(100):
+    for x in range(30):
         # 更新数据
         st.session_state.xx.append(x)
         st.session_state.yy.append(random.random() * 100)
