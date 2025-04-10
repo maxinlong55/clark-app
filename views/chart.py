@@ -101,3 +101,37 @@ place_holder2 = st.empty()
 if len(selection) != 0:
     place_holder1.line_chart(df[selection])
     place_holder2.bar_chart(df[selection])
+
+
+st.divider()
+col_middle = st.columns((3,5,2.5),gap='small')
+with col_middle[1]:
+    st.write("st.dataframe type of show data")
+    st.write("COVID situation between contountry")
+st.write("\n")
+
+col_frame = st.columns((3,5),gap='small')
+dff= pd.read_csv("assets/country_covid.csv")
+dff=dff.head(20)
+column_name=dff.columns
+
+with col_frame[0]:
+    st.dataframe(dff, column_order=("Country/Region", "Confirmed"),
+                 hide_index=True,
+                 width=None,
+                 column_config={
+                     "Country/Region": st.column_config.TextColumn("Country/Region"),
+                     "Confirmed": st.column_config.ProgressColumn("Confirmed", format="%f", min_value=0,max_value=max(dff.Confirmed)),
+                 }
+                 )
+
+with col_frame[1]:
+    st.dataframe(dff, column_order=(column_name[0], column_name[1],column_name[2]),
+                 hide_index=True,
+                 width=None,
+                 column_config={
+                     column_name[0]: st.column_config.TextColumn(column_name[0]),
+                     column_name[1]: st.column_config.ProgressColumn(column_name[1], format="%f", min_value=0,max_value=max(dff[column_name[1]])),
+                     column_name[2]: st.column_config.ProgressColumn(column_name[2], format="%f", min_value=0,max_value=max(dff[column_name[2]])),
+                 }
+                 )
