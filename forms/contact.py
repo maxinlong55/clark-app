@@ -18,7 +18,7 @@ def contact_form():
         email = st.text_input("Email Address")
         message = st.text_area("Your Message")
         submit_button = st.form_submit_button("Submit")
-        st.markdown("Or,Send Email to: clark55malong@gmail.com")
+        st.markdown("Or, Send Email to: clark55malong@gmail.com")
 
     if submit_button:
         if not WEBHOOK_URL:
