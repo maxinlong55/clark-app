@@ -1,5 +1,13 @@
 import streamlit as st
 st.markdown(
+    """<p style="text-align: center; font-size: 25px;"> Daily </p>""",
+    unsafe_allow_html=True
+)
+st.divider()
+
+
+
+st.markdown(
     """<p style="text-align: center; font-size: 20px;">Gym</p>""",
     unsafe_allow_html=True
 )
