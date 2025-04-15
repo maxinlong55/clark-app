@@ -6,7 +6,7 @@ st.markdown(
 st.divider()
 
 st.markdown(
-    """<p style="text-align: center; font-size: 20px;">Don't complai</p>""",
+    """<p style="text-align: center; font-size: 20px;">Don't complain yourself anymore</p>""",
     unsafe_allow_html=True
 )
 st.markdown(
