@@ -135,3 +135,13 @@ with col_frame[1]:
                      column_name[2]: st.column_config.ProgressColumn(column_name[2], format="%f", min_value=0,max_value=max(dff[column_name[2]])),
                  }
                  )
+
+st.divider()
+coll1,coll2,coll3,coll4 = st.columns(4)
+one = coll1.slider("first",0,100,value = 0,step=1)
+two = coll2.slider("second",0,200,value=50,step=1)
+three = coll3.slider("three",0,300,step=1)
+four = coll4.slider("four",0,300,value=100,step=1)
+list = [one,two,three,four]
+df = pd.DataFrame({"value":list})
+st.line_chart(df)
