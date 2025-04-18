@@ -8,7 +8,6 @@ st.markdown(
 )
 colai = st.columns(2)
 API_KEY = colai[0].text_input("Please enter your Deepseek API key")
-
 API_URL = "https://api.deepseek.com"
 client = OpenAI(api_key=API_KEY, base_url=API_URL)
 st.divider()
