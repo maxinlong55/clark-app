@@ -2,6 +2,10 @@
 from openai import OpenAI
 
 import streamlit as st
+st.markdown(
+    """<p style="text-align: center; font-size: 25px;"> Use Deepseek API to chat with memory </p>""",
+    unsafe_allow_html=True
+)
 colai = st.columns(2)
 API_KEY = colai[0].text_input("Please enter your Deepseek API key")
 
