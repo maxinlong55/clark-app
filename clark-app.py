@@ -22,6 +22,9 @@ News_2025=st.Page(page="views/News_2025.py",
 daily=st.Page(page="views/daily.py",
                 title="Daily",
                 icon=":material/robot:")
+AI=st.Page(page="views/ai.py",
+                title="AI-Test",
+                icon=":material/robot:")
 
 pg=st.navigation(
     {
@@ -29,6 +32,7 @@ pg=st.navigation(
         "Project":[chart,camera],
         "News":[News_2025],
         "Daily":[daily],
+	"AI":[AI],
     }
 )
 
