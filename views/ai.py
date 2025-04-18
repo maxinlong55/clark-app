@@ -3,7 +3,7 @@ from openai import OpenAI
 
 import streamlit as st
 st.markdown(
-    """<p style="text-align: center; font-size: 25px;"> Use Deepseek API to chat with memory </p>""",
+    """<p style="text-align: center; font-size: 25px;"> Use Deepseek API chat with memory</p>""",
     unsafe_allow_html=True
 )
 colai = st.columns(2)
