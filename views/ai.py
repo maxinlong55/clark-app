@@ -11,9 +11,6 @@ API_KEY = colai[0].text_input("Please enter your Deepseek API key")
 API_URL = "https://api.deepseek.com"
 client = OpenAI(api_key=API_KEY, base_url=API_URL)
 st.divider()
-
-# API_KEY = "sk-d5e0ddf5b01a49aeb3270c89e597322d"
-
 if "messages" not in st.session_state:
     st.session_state.messages = [{"role": "assistant", "content": "I am a AI assistant"}]
 
