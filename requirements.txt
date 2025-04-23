@@ -6,4 +6,6 @@ numpy==1.26.4
 matplotlib
 mediapipe==0.10.21
 openai
+mediapipe
+streamlit_webrtc
 
