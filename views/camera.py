@@ -1,5 +1,4 @@
 import streamlit as st
-import cv2
 import numpy as np
 
 st.title("Camera with OpenCV Processing")
