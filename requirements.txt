@@ -2,7 +2,6 @@ altair
 pandas
 streamlit
 opencv-python-headless==4.9.0.80
-opencv-python
 numpy==1.26.4
 matplotlib
 openai
