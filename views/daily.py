@@ -14,10 +14,10 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.markdown("""
-Life is too short to regret.
-If you want to do something, try it at least.
-don't worry too much.
-If you don't try it, it has no chance to achieve it.
+Life is too short to regret.\n
+If you want to do something, try it at least.\n
+don't worry too much.\n
+If you don't try it, it has no chance to achieve it.\n
 If you try it, it has a little chance to get it at least.
  """)
 st.divider()
