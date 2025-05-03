@@ -6,6 +6,23 @@ st.markdown(
 st.divider()
 
 st.markdown(
+    """<p style="text-align: center; font-size: 20px;">Don't regret it</p>""",
+    unsafe_allow_html=True
+)
+st.markdown(
+    """<p style="text-align: center; font-size: 18px;"> May 3,2025 </p>""",
+    unsafe_allow_html=True
+)
+st.markdown("""
+Life is too short to regret.
+If you want to do something, try it at least.
+don't worry too much.
+If you don't try it, it has no chance to achieve it.
+If you try it, it has a little chance to get it at least.
+ """)
+st.divider()
+
+st.markdown(
     """<p style="text-align: center; font-size: 20px;">Don't complain yourself anymore</p>""",
     unsafe_allow_html=True
 )
